@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  width: 100%;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
 }
 
 .App-logo {
@@ -35,4 +46,221 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.calendar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.week {
+  display: flex;
+  gap: 10px;
+}
+
+.day {
+  width: 200px;
+  min-height: 300px;
+  background-color: #F3F5F8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.day-name {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.day-date {
+  display: block;
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #728096;
+  
+}
+
+.day-date.today {
+  color: purple;
+  font-weight: bold;  
+}
+
+.workouts {
+  min-height: 250px;
+}
+
+.workout {
+  background-color: #f9f9f9; 
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 3px;
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+}
+
+.workout-name {
+ display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding-left: 7px;
+}
+
+.workout-name-label {
+  color: #5A57CB;
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 85%;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 5px;
+}
+
+.exercises {
+  min-height: 20px;
+}
+
+.exercise {
+  background-color: #fff;
+  border: 1px solid #DFDFDF;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding: 8px;
+  cursor: move;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exercise input {
+  font-size: 11px;
+  margin-bottom: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.exercise button {
+  font-size: 10px;
+  margin-right: 5px;
+  padding: 2px 5px;
+}
+
+.exercise-name {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  display: block;
+  text-align: right;
+  margin-left: 15%; 
+  max-width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.exercise-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exercise-sets {
+  font-size: 11px;
+  color: #666;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70%;
+}
+
+.exercise-reps {
+  font-size: 11px;
+  color: #666;
+  font-weight: bold;
+}
+
+.add-exercise-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.add-workout-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  position: relative;
+}
+
+.add-workout-input {
+  margin: 5px 0;
+}
+
+.workout-name-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-workout-input button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+
+.week-header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.add-exercise-container {
+  display: flex;
+  justify-content: flex-end;
 }

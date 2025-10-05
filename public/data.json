@@ -1,0 +1,25 @@
+{
+  "monday": [],
+  "tuesday": [
+    {
+      "name": "Back Day",
+      "exercises": [
+        { "name": "Deadlifts", "sets": "8 lb x 3", "reps": "3" },
+        { "name": "Pull-ups", "sets": "10 lb x 3", "reps": "3" }
+      ]
+    }
+  ],
+  "wednesday": [
+    {
+      "name": "Leg Day",
+      "exercises": [
+        { "name": "Squats", "sets": "10 lb x 3", "reps": "10" },
+        { "name": "Leg Press", "sets": "12 lb x 4", "reps": "12" }
+      ]
+    }
+  ],
+  "thursday": [],
+  "friday": [],
+  "saturday": [],
+  "sunday": []
+}

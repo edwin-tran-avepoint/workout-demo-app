@@ -1,8 +1,23 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  test('renders the app with calendar', async () => {
+    render(<App />);
+    await waitFor(() => {
+      expect(screen.getByText('MON')).toBeInTheDocument();
+    });
+  });
+
+  test('loads data from JSON if no localStorage', async () => {
+    render(<App />);
+    await waitFor(() => {
+      expect(screen.getByText('Back Day')).toBeInTheDocument();
+    });
+  });
+
 });
