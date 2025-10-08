@@ -39,3 +39,20 @@ Runs the test suite.
 ### `npm run build`
 
 Builds the app for production to the `build` folder.
+
+## Data Storage
+
+This application uses a two-tier storage approach:
+
+### Initial Data
+
+- Initial workout data is stored in the `/public` folder
+- The application loads this data on first run
+
+### User Updates
+
+- Any changes made by users are saved to the browser's localStorage
+- This allows user data to persist between sessions without requiring a backend database
+- Data is automatically loaded from localStorage when returning to the application
+
+To reset to initial data, clear your browser's localStorage for this domain.
